@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,6 +77,74 @@
             background-color: #3498db;
             color: #fff;
         }
+
+        /* Flip card container */
+        .certificate-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Flip card styling */
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px; /* Perspective for the 3D effect */
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg); /* Start upside-down */
+        }
+
+        /* Front and back of the card */
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        /* Front of the card (image) */
+        .flip-card-front {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #3498db;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Back of the card (course name) */
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        /* Make the card clickable (cursor pointer) */
+        .flip-card {
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 15px;
@@ -92,12 +161,12 @@
 </head>
 <body>
     <h1>ELMUJTABA BABIKER</h1>
-    
+
     <div class="section">
         <h2>About Me</h2>
         <p>With over two years of experience in penetration testing, I have developed a strong foundation in identifying and mitigating security vulnerabilities. In addition, I have recently embarked on a programming journey, acquiring key technical skills over the past nine months. My background combines analytical expertise and hands-on technical knowledge, making me well-equipped to tackle complex cybersecurity challenges.</p>
     </div>
-    
+
     <div class="section">
         <h2>Skills</h2>
         <div class="skills">
@@ -110,18 +179,70 @@
             <span class="skill">JavaScript ES6+</span>
         </div>
     </div>
-    
+
+    <div class="section">
+        <h2>Certificates</h2>
+        <div class="certificate-cards">
+            <!-- Python Certificate Flip Card -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/Python Intermediate_certificate.jpg" alt="Python Certificate">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Python Intermediate</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HTML Certificate Flip Card -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/Introduction to HTML_certificate.jpg" alt="HTML Certificate">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>HTML Introduction</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- SQL Certificate Flip Card -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/SQL Intermediate_certificate.jpg" alt="SQL Certificate">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>SQL Intermediate</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Teck for Evry thing Certification -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/Tech for Everyone_certificate.jpg" alt="Teck for Evry thing Certificate">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Teck For Everyone</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="section">
         <h2>Education</h2>
         <p><strong>HIGH SCHOOL DIPLOMA</strong> - Bashir, Omdurman (2022)</p>
         <p>Working towards ... <strong>Bachelor of Electrical Engineering</strong> - Sudan University of Science and Technology </p>
     </div>
-    
+
     <div class="section">
         <h2>Hobbies</h2>
         <p>Playing Capture The Flag in famous competitions like "picoCTF", "Hack The Box", and "Try Hack Me".</p>
     </div>
-    
+
     <div class="section">
         <h2>Contact</h2>
         <p>Address: RBGA8972 Asad Ibn Harith Alkhazraji, Riyadh, 12735</p>
@@ -134,5 +255,16 @@
             <a href="https://x.com/MujtabaNem46252?t=0k0sDXkGP0esUFbF--16fw&s=09" target="_blank">X</a>
         </div>
     </div>
+
+    <script>
+        function flipCard(card) {
+            const cardInner = card.querySelector('.flip-card-inner');
+            if (cardInner.style.transform === 'rotateY(0deg)') {
+                cardInner.style.transform = 'rotateY(180deg)'; // Flip to upside-down
+            } else {
+                cardInner.style.transform = 'rotateY(0deg)'; // Flip to right-side up
+            }
+        }
+    </script>
 </body>
 </html>
