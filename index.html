@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elmujtaba Babiker - Personal Website</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -17,22 +22,39 @@
             color: #2c3e50;
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: clamp(24px, 5vw, 36px);
         }
         h2 {
             color: #2980b9;
+            font-size: clamp(18px, 4vw, 24px);
+            margin-bottom: 10px;
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .skills {
             display: flex;
             flex-wrap: wrap;
+            gap: 10px;
         }
         .skill {
             background-color: #ecf0f1;
             padding: 5px 10px;
-            margin: 5px;
             border-radius: 5px;
+            font-size: clamp(14px, 2vw, 16px);
+        }
+        p {
+            font-size: clamp(16px, 2.5vw, 18px);
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .section {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
