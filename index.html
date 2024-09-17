@@ -44,9 +44,37 @@
             border-radius: 5px;
             font-size: clamp(14px, 2vw, 16px);
         }
+        .skill:hover {
+            background-color: #3498db;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
         p {
             font-size: clamp(16px, 2.5vw, 18px);
             margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+        a:hover {
+            color: #3498db;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .social-links a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            font-size: clamp(14px, 2vw, 16px);
+        }
+        .social-links a:hover {
+            background-color: #3498db;
+            color: #fff;
         }
         @media (max-width: 768px) {
             body {
@@ -54,6 +82,10 @@
             }
             .section {
                 margin-bottom: 20px;
+            }
+            .social-links {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
@@ -64,13 +96,6 @@
     <div class="section">
         <h2>About Me</h2>
         <p>With over two years of experience in penetration testing, I have developed a strong foundation in identifying and mitigating security vulnerabilities. In addition, I have recently embarked on a programming journey, acquiring key technical skills over the past nine months. My background combines analytical expertise and hands-on technical knowledge, making me well-equipped to tackle complex cybersecurity challenges.</p>
-    </div>
-    
-    <div class="section">
-        <h2>Contact</h2>
-        <p>Address: RBGA8972 Asad Ibn Harith Alkhazraji, Riyadh, 12735</p>
-        <p>Email: almogtbanmrr123@gmail.com</p>
-        <p>Phone: 0563829200</p>
     </div>
     
     <div class="section">
@@ -89,11 +114,25 @@
     <div class="section">
         <h2>Education</h2>
         <p><strong>HIGH SCHOOL DIPLOMA</strong> - Bashir, Omdurman (2022)</p>
+        <p>Working towards ... <strong>Bachelor of Electrical Engineering</strong> - Sudan University of Science and Technology </p>
     </div>
     
     <div class="section">
         <h2>Hobbies</h2>
-        <p>Play Capture The Flag in the most famous topics like "picoCTF", "Hack The Box", and "Try Hack Me".</p>
+        <p>Playing Capture The Flag in famous competitions like "picoCTF", "Hack The Box", and "Try Hack Me".</p>
+    </div>
+    
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Address: RBGA8972 Asad Ibn Harith Alkhazraji, Riyadh, 12735</p>
+        <p>Email: almogtbanmr123@gmail.com</p>
+        <p>Phone: 0563829200</p>
+        <p>Social Media:</p> 
+        <div class="social-links">
+            <a href="https://www.facebook.com/amogtba.nemer?mibextid=ZbWKwL" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/almujtaba_abd_algani?igsh=MXZvMWx6dHRic3ZpbA==" target="_blank">Instagram</a>
+            <a href="https://x.com/MujtabaNem46252?t=0k0sDXkGP0esUFbF--16fw&s=09" target="_blank">X</a>
+        </div>
     </div>
 </body>
 </html>
